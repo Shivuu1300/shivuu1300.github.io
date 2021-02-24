@@ -115,7 +115,57 @@
         -webkit-text-decoration-skip-ink: none;
         text-decoration-skip-ink: none;
     }
-    
+
+
+    #back2top{ 
+            
+            position: fixed;
+            bottom: 20px;
+            
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color:transparent;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            margin-right:2%;
+            border-radius: 100px;
+    }
+    #back2top:hover {
+        
+        box-shadow: greenyellow;
+      }
+
+    .get_in_touch_button{
+            padding:10px;
+            text-align: center;
+            background-color:none;
+            color:black;
+            font-weight: bolder;
+            border: 1px solid black;
+            width: 10%;
+            font-size: small;
+            
+            /* background-color:transparent;*/
+        
+
+    }
+    .get_in_touch_button:hover{
+        border: 1px solid #55efc4;
+        background-color: black;
+        color:#55efc4;
+        text-decoration: none;
+    }
+
+
+    .mainFooter{
+        text-align:center;
+        margin-bottom: 2%;
+        width: 100%;
+    }
     address {
         margin-bottom: 1rem;
         font-style: normal;
@@ -173,7 +223,9 @@
     sup {
         top: -0.5em;
     }
-    
+    .green{
+        color: #55efc4;
+    }
     a {
         color: #55efc4;
         text-decoration: none;
@@ -428,6 +480,8 @@
     .lead {
         font-size: 1.25rem;
         font-weight: 300;
+        letter-spacing: 1.0px;
+        text-align:justify;
     }
     
     .display-1 {
@@ -592,12 +646,12 @@
         margin-right: auto;
         margin-left: auto;
     }
-    
     @media (min-width: 576px) {
         .container-sm,
         .container {
             max-width: 540px;
         }
+        
     }
     
     @media (min-width: 768px) {
@@ -618,6 +672,7 @@
     }
     
     @media (min-width: 1200px) {
+        
         .container-xl,
         .container-lg,
         .container-md,
