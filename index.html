@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Shivam Yadav Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/img/titlebar_icon.png" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <span class="d-block d-lg-none">Shivam Yadav</span>
-
+            
             <!-- width="200" height="50" -->
             <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets\img\Shivam-Yadav-Frcrce.jpg" alt="" /></span>
         </a>
@@ -55,6 +55,16 @@
                     Nallasopara, India · (+91) 9021778048 ·
                     <a href="mailto:yshivam9920@gmail.com">yshivam9920@gmail.com</a>
                 </div>
+
+                <!-- Dark Theme Toggle Button  -->
+                <div class="darkThemeDiv">
+                    <p id="themeToggleVal">Dark Theme</p>
+                    <label id="light2dark_label" class="switch">
+                        <input id="light2dark" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
                 <p class="lead mb-5">I am an <span class="green">AI</span> and <span class="green">Computer Vision</span> enthusiast. I have an ability to develop cross-platform apps using Flutter and develop APIs and Web Applications using Django and Flask frameworks of Python.<br> Also a leader who leads with an example and has
                     a strong belief in winning together. <br>
                     The things which keeps me motivated to my goals are my writing and my creative content developing skills because of which I feel proud and confident in delivering my niche with
@@ -327,26 +337,47 @@
 
 <!-- Back to top button :  script -->
     <script>
-        //Get the button
-        var mybutton = document.getElementById("back2top");
-        
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-        
-        function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-          } else {
-            mybutton.style.display = "none";
-          }
-        }
-        
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
-        </script>
+        // --------------- Back to Top Functionality ----------------------
+            //Get the button
+            var mybutton = document.getElementById("back2top");
+            
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            }
+        // ------------------- Dark Theme Toggle Functionality -----------------
+
+            document.addEventListener('DOMContentLoaded', function () {
+            var checkbox = document.querySelector('input[type="checkbox"]');
+
+            checkbox.addEventListener('change', function () {
+                    if (checkbox.checked) {
+                        console.log(checkbox);
+                    document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+                    document.getElementById("themeToggleVal").innerHTML = "Dark Theme";
+                    } else {
+                        console.log(checkbox);
+                    document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+                    document.getElementById("themeToggleVal").innerHTML = "Light Theme";
+                    }
+                });
+            });
+
+
+
+    </script>
 </body>
 
 </html>
